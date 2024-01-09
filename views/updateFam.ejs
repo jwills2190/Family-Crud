@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit <%=family.Name%></title>
+</head>
+<body>
+    <h1>Fill out the form to update a family member!</h1>
+
+    <br>
+
+    <a href="/oneFam/<%=family.Name%>">Go back to <%=family.Name%></a>
+
+    <br><br>
+
+    <form action="/api/family/updateFam/<%=family.Name%>?_method=PUT" method="post">
+
+        <label>Name:</label>
+        <input type="text" name="Name" placeholder="<%=family.Name%>">
+        
+        <br><br>
+
+        <label>Relation:</label>
+        <input type="text" name="Relation" placeholder="<%=family.Relation%>">
+
+        <br><br>
+
+        <label>Age:</label>
+        <input type="text" name="Age" placeholder="<%=family.Age%>">
+        
+        <br><br>
+
+        <label>City:</label>
+        <input type="text" name="City" placeholder="<%=family.City%>">
+
+        <br><br>
+
+        <label>Birthplace:</label>
+        <input type="text" name="Birthplace" placeholder="<%=family.Birthplace%>">
+
+        <br><br>
+
+        <label>Lived In: (Seperate Cities with Commas)</label>
+        <input type="text" name="Lived_In" placeholder="<%=family.Lived_In%>">
+
+        <br><br>
+        <input type="submit" name="_method" value="Update Family Member">
+
+
+    </form>
+    
+</body>
+</html>

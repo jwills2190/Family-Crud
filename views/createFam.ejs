@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter a new family member</title>
+</head>
+<body>
+    <h1>Enter a new Family Member!</h1>
+
+    <a href="/">Back to homepage</a>
+    <br>
+
+    <a href="/allFam">Go back to list of family members</a>
+    
+    <br><br>
+
+    <form action="/api/family/createOneFamilyMember" method="post">
+
+        <label>Name:</label>
+        <input type="text" name="Name">
+        
+        <br><br>
+
+        <label>Relation:</label>
+        <input type="text" name="Relation">
+
+        <br><br>
+
+        <label>Age:</label>
+        <input type="text" name="Age">
+        
+        <br><br>
+
+        <label>City:</label>
+        <input type="text" name="City">
+
+        <br><br>
+
+        <label>Birthplace:</label>
+        <input type="text" name="Birthplace">
+
+        <br><br>
+
+        <label>Lived In: (Seperate Cities with Commas)</label>
+        <input type="text" name="Lived_In">
+
+        <br><br>
+        <input type="submit" value="Create Family Member">
+
+    </form>
+</body>
+</html>

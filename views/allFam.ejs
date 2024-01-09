@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My family!</title>
+</head>
+<body>
+    <h1>Here is a short list of my family members!</h1>
+
+    <a href="/">Back to homepage</a>
+    <br><br>
+    <a href="/createFamilyMember">Go here to create a family member!</a>
+    <br><br>
+
+    <% family.forEach((member) => { %>
+        <a href="/oneFam/<%=member.Name%>"> 
+            <h2>Name: <%=member.Name%></h2>
+        </a>
+            <h2>Relation: <%=member.Relation%></h2>
+            <h2>Age: <%=member.Age%></h2>
+            <h3>City: <%=member.City%></h3>
+            <h3>Birthplace: <%=member.Birthplace%></h3>
+
+        <br><br>
+    <%})%>
+</body>
+</html>

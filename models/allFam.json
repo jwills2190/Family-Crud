@@ -1,0 +1,91 @@
+[
+    {
+        "Name": "Kailey Lancello",
+        "Relation": "Wife",
+        "Age": 31,
+        "City": "Charlotte, NC",
+        "Birthplace": "Kaukana, WI",
+        "Lived_In": ["Charlotte", "Appleton", "Kaukana", "Fort Myers", "St. Petersburg"]
+    },
+    {
+        "Name": "Astrid Williams",
+        "Relation": "Mom",
+        "Age": 66,
+        "City": "Miami, FL",
+        "Birthplace": "Havana, Cuba",
+        "Lived_In": ["Havana", "Miami"]
+    },
+    {
+        "Name": "Hanif Williams",
+        "Relation": "Dad",
+        "Age": 69,
+        "City": "Miami, FL",
+        "Birthplace": "Kingston, Jamaica",
+        "Lived_In": ["Kingston", "Miami"]
+    },
+    {
+        "Name": "Krystina Regan",
+        "Relation": "Sister",
+        "Age": 30,
+        "City": "Miami, FL",
+        "Birthplace": "Miami, FL",
+        "Lived_In": ["Miami", "Seattle", "Pittsburgh"]
+    },
+    {
+        "Name": "Sergio Williams",
+        "Relation": "Brother",
+        "Age": 31,
+        "City": "Miami, FL",
+        "Birthplace": "Miami, FL",
+        "Lived_In": ["Miami", "Evanston"]
+    },
+    {
+        "Name": "Max Regan",
+        "Relation": "Brother in law",
+        "Age": 31,
+        "City": "Miami, FL",
+        "Birthplace": "Miami, FL",
+        "Lived_In": ["Miami", "Seattle", "Kansas City", "Milan", "Boston"]
+    },
+    {
+        "Name": "Nora Regan",
+        "Relation": "Niece",
+        "Age": 3,
+        "City": "Miami, FL",
+        "Birthplace": "Miami, FL",
+        "Lived_In": ["Miami"]
+    },
+    {
+        "Name": "Dave Lancello",
+        "Relation": "Father in law",
+        "Age": 62,
+        "City": "Appleton, WI",
+        "Birthplace": "St. Paul, MN",
+        "Lived_In": ["St. Paul", "Appleton", "Kaukana"]
+    },
+    {
+        "Name": "Cheryl Lancello",
+        "Relation": "Mother in law",
+        "Age": 55,
+        "City": "Appleton, WI",
+        "Birthplace": "Kaukana, WI",
+        "Lived_In": ["Appleton", "Kaukana"]
+
+    },
+    {
+        "Name": "Damian Regan",
+        "Relation": "Nephew",
+        "Age": 0,
+        "City": "Miami, FL",
+        "Birthplace": "Miami, FL",
+        "Lived_In": ["Miami, FL"]
+    },
+    {
+        "Name": "Daniel Williams",
+        "Relation": "Brother",
+        "Age": 38,
+        "City": "Pembroke Pines, FL",
+        "Birthplace": "Miami, FL",
+        "Lived_In": ["Pembroke Pines"]
+    }
+]

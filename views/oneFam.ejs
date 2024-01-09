@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=oneFam.Name%></title>
+</head>
+<body>
+    <a href="/allFam">Back to all family</a>
+    <h1>Name: <%=oneFam.Name%></h1>
+    <h2>Relation: <%=oneFam.Relation%></h2>
+    <h2>Age: <%=oneFam.Age%></h2>
+    <h3>City: <%=oneFam.City%></h3>
+    <h3>Birthplace: <%=oneFam.Birthplace%></h3>
+    <h3>Cities lived in: </h3>
+    <ul>
+        <% oneFam.Lived_In.forEach((onePlace) => { %>
+            <li>
+                <%=onePlace%>
+            </li>
+        <% }) %>
+    </ul>
+
+    <br><br>
+
+    <a href="/updateFam/<%=oneFam.Name%>">Update this family member</a>
+
+    <br><br>
+
+    <form action="/api/family/deleteFamilyMember/<%=oneFam.Name%>?_method=DELETE" method="post">
+        <input type="submit" name="_method" value="DELETE THIS FAMILY MEMBER">
+    </form>
+    
+</body>
+</html>
