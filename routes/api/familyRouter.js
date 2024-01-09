@@ -3,9 +3,11 @@ const router = require('express').Router();
 const {
     getAllFamily,
     getOneMember,
+    getMemberById,
     createOneFamilyMember,
     deleteFamilyMember,
-    updateFamilyMember
+    updateFamilyMember,
+    patchFamilyMember
 } = require("../../controllers/api/familyController")
 
 // localhost:3000/api/family/allFamily
@@ -22,4 +24,9 @@ router.delete("/deleteFamilyMember/:name", deleteFamilyMember);
 
 // localhost:3000/api/family/updateFam/:name
 router.put("/updateFam/:name", updateFamilyMember)
+
+router.get("/members", getAllFamily);
+router.post("/members", createOneFamilyMember);
+router.get("/members/:id", getMemberById);
+router.patch("/members/:id", patchFamilyMember);
 module.exports = router
