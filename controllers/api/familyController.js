@@ -43,6 +43,27 @@ async function getOneMember(req, res) {
     }
 }
 
+async function getMemberById(req, res) {
+    try {
+        const result = await Family.findById(req.params.id);
+
+        res.json({
+            message: "Success",
+            payload: result
+        })
+    } catch (error) {
+        const errorObj = {
+            message: "get one member failed",
+            payload: error
+        }
+        // server-side error log
+        console.error(errorObj);
+
+        // client-side error log
+        res.json(errorObj);
+    }
+}
+
 async function createOneFamilyMember (req, res) {
     try {
         let newFamilyMember = {
@@ -136,10 +157,41 @@ async function updateFamilyMember (req, res) {
     }
 }
 
+async function patchFamilyMember(req, res) {
+  const id = req.params.id;
+  if (!id) {
+    return res.json({ error: "ID is required" });
+  }
+
+  const user = await Family.findById(id);
+
+  if (!user) {
+    return res.json({ error: `No user with an ID of ${id} could be found` });
+  }
+
+  Object.entries(req.body).forEach(([key, value]) => {
+    user[key] = value;
+  });
+
+  await user.save()
+    .then((result) => {
+      res.json(result);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.json({
+        message: `Error updating user ${id}`,
+        error: err,
+      })
+    })
+}
+
 module.exports = {
     getAllFamily,
     getOneMember,
+    getMemberById,
     createOneFamilyMember,
     deleteFamilyMember,
-    updateFamilyMember
+    updateFamilyMember,
+    patchFamilyMember,
 }
